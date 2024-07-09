@@ -38,22 +38,17 @@ namespace Journey.Application.UseCases.Trips.Register
 
         private void Validate(RequestRegisterTripJson request)
         {
-            if (string.IsNullOrWhiteSpace(request.Name))
-            {
-                throw new JourneyException(ResourceErrorMessages.NAME_EMPTY);
-            }
 
-            //validacao com hora sempre usar utc pois pega a hora base do planeta
-            if (request.StartDate.Date < DateTime.UtcNow.Date)
-            {
-                throw new JourneyException(ResourceErrorMessages.DATE__TRIP_MUST_BE_LATER_THAN_TODAY);
-            }
+            var validator = new RegisterTripValidator();
 
-            if (request.EndDate.Date < request.StartDate.Date)
-            {
-                throw new JourneyException(ResourceErrorMessages.END_DATE_TRIP_MUST_BE_LATER_START_DATE);
-            }
+            var result =  validator.Validate(request);   
 
+           if (result.IsValid== false) 
+           {
+                var errorMessage = result.Errors.Select(erro => erro.ErrorMessage).ToList();
+
+                throw new ErrorOnValidationException(errorMessage); 
+           }
 
         }
 
