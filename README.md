@@ -1,6 +1,6 @@
-Projeto Journey
+Projeto RegisterTripAPI
 
-O Projeto Journey é uma API desenvolvida com o objetivo de servir como a parte backend para aplicações frontend. Ele utiliza uma estrutura de pastas bem organizada e está conectado a um banco de dados SQLite. Este projeto é ideal para desenvolvedores que buscam aprender e aplicar práticas utilizadas no mercado de trabalho, contando com comentários no código para facilitar o entendimento e a manutenção.
+O Projeto RegisterTripAPI é uma API desenvolvida com o objetivo de servir como a parte backend para aplicações frontend. Ele utiliza uma estrutura de pastas bem organizada e está conectado a um banco de dados SQLite. Este projeto é ideal para desenvolvedores que buscam aprender e aplicar práticas utilizadas no mercado de trabalho, contando com comentários no código para facilitar o entendimento e a manutenção.
 
 Estrutura do Projeto
 A estrutura do projeto é organizada da seguinte forma:
